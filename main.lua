@@ -63,7 +63,7 @@ function love.load()
     for a=0, perlin_TWOPI, 0.1 do
         local xoff = map(math.cos(a), -1, 1, 0, noiseMax)
         local yoff = map(math.sin(a), -1, 1, 0, noiseMax)
-        local r = map(perlin:noise(xoff,yoff),0,1,100,200)
+        local r = map(perlin:noise(xoff,yoff),-1,1,100,200)
         local x = r * math.cos(a) + 640 / 2
         local y = r * math.sin(a) + gameHeight / 2
         table.insert(polygon4, x)
